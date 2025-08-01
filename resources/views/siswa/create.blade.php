@@ -10,13 +10,14 @@
     <h1>HALAMAN TAMBAH SISWA</h1>
     <h2>Form Tamnbah Siswa</h2>
     <a href="/">Kembali</a>
-    <form>
+    <form action="/siswa/store" method="POST">
+        @csrf
         <div>
             <label for="">Kelas</label>
-            <select name="">
-                <option value="">XI PPLG 1</option>
-                <option value="">XI PPLG 2</option>
-                <option value="">XI PPLG 3</option>
+            <select name="kelas_id">
+                <option value="1">XII PPLG 1</option>
+                <option value="2">XII PPLG 2</option>
+                <option value="3">XII PPLG 3</option>
             </select>
         </div>
         <div>
@@ -41,7 +42,7 @@
         </div>
         <div>
             <label for="">No Handphone</label> <br>
-            <input type="password" name="no_handphone">
+            <input type="tel" name="no_handphone">
         </div>
         <div>
             <label for="">Foto</label> <br>
