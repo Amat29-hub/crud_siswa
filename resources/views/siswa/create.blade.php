@@ -22,27 +22,45 @@
         </div>
         <div>
             <label for="">Nama</label> <br>
-            <input type="text" name="name">
+            <input type="text" name="name"><br>
+            @error('name')
+                <small style="color:red">{{$message}}</small>
+            @enderror
         </div>
         <div>
             <label for="">NISN</label> <br>
-            <input type="text" name="nisn">
+            <input type="text" name="nisn"><br>
         </div>
+        @error('nisn')
+            <small style="color:red">{{$message}}</small>
+        @enderror
         <div>
             <label for="">Alamat</label> <br>
-            <input type="text" name="alamat">
+            <input type="text" name="alamat"><br>
+            @error('alamat')
+                <small style="color:red">{{$message}}</small>
+            @enderror
         </div>
         <div>
             <label for="">Email</label> <br>
-            <input type="text" name="email">
+            <input type="text" name="email"><br>
+            @error('email')
+                <small style="color:red">{{$message}}</small>
+            @enderror
         </div>
         <div>
             <label for="">Password</label> <br>
-            <input type="password" name="password">
+            <input type="password" name="password"><br>
+            @error('password')
+                <small style="color:red">{{$message}}</small>
+            @enderror
         </div>
         <div>
             <label for="">No Handphone</label> <br>
-            <input type="tel" name="no_handphone">
+            <input type="tel" name="no_handphone"><br>
+            @error('no_handphone')
+                <small style="color:red">{{$message}}</small>
+            @enderror
         </div>
         <div>
             <label for="">Foto</label> <br>
