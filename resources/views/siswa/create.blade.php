@@ -10,10 +10,10 @@
     <h1>HALAMAN TAMBAH SISWA</h1>
     <h2>Form Tamnbah Siswa</h2>
     <a href="/">Kembali</a>
-    <form action="/siswa/store" method="POST" enctype="multipart/form-data">
+    <form action="/siswa/store" method="POST" enctype="multipart/form-data"><br>
         @csrf
         <div>
-            <label for="">Kelas</label>
+            <label for="">Kelas</label><br>
             <select name="kelas_id">
                 @foreach ($clases as $clas)
                     <option value="{{$clas->id}}">{{$clas->name}}</option>

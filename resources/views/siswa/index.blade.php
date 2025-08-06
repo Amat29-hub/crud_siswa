@@ -9,8 +9,8 @@
 <body>
     <h1>HALAMAN BERANDA SISWA</h1>
     <h2>Daftar Siswa</h2>
-    <a href="siswa/create">Tambah Siswa</a>
-    <table border="1">
+    <a href="siswa/create">Tambah Data Siswa</a>
+    <table border="5">
         <thead>
             <tr>
                 <th>NO</th>
@@ -23,19 +23,23 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($siswas as $siswa)
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{$siswa->id}}</td>
+                <td>{{$siswa->name}}</td>
+                <td>{{$siswa->Clas->name}}</td>
+                <td>{{$siswa->nisn}}</td>
+                <td>{{$siswa->alamat}}</td>
+                <td>
+                    <img src="{{asset ('storage/' . $siswa->photo)}}" alt="Photo Siswa" width="50">
+                </td>
                 <td>
                     <a href="">DELETE</a> |
                     <a href="">EDIT</a> |
                     <a href="">DETAIL</a> |
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </body>
