@@ -10,14 +10,14 @@
     <h1>HALAMAN TAMBAH SISWA</h1>
     <h2>Form Tamnbah Siswa</h2>
     <a href="/">Kembali</a>
-    <form action="/siswa/store" method="POST">
+    <form action="/siswa/store" method="POST" enctype="multipart/form-data">
         @csrf
         <div>
             <label for="">Kelas</label>
             <select name="kelas_id">
-                <option value="1">XII PPLG 1</option>
-                <option value="2">XII PPLG 2</option>
-                <option value="3">XII PPLG 3</option>
+                @foreach ($clases as $clas)
+                    <option value="{{$clas->id}}">{{$clas->name}}</option>
+                @endforeach
             </select>
         </div>
         <div>
@@ -64,7 +64,10 @@
         </div>
         <div>
             <label for="">Foto</label> <br>
-            <input type="file" name="foto">
+            <input type="file" name="foto"><br>
+            @error('foto')
+                <small style="color:red">{{$message}}</small>
+            @enderror
         </div>
 
         <button type="submit">Simpan</button>
