@@ -11,3 +11,5 @@ Route::get('/', [SiswaController::class, 'index']);
 Route::get('/siswa/create', [SiswaController::class, 'create']);
 
 Route::post('/siswa/store', [SiswaController::class, 'store']);
+
+Route::get('/siswa/delete/{id}', [SiswaController::class, 'destroy']);

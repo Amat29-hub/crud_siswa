@@ -34,9 +34,9 @@
                     <img src="{{asset ('storage/' . $siswa->photo)}}" alt="Photo Siswa" width="50">
                 </td>
                 <td>
-                    <a href="">DELETE</a> |
-                    <a href="">EDIT</a> |
-                    <a href="">DETAIL</a> |
+                    <a href="/siswa/delete/{{$siswa->id}}">Delete</a> |
+                    <a href="">Edit</a> |
+                    <a href="">Detail</a> |
                 </td>
             </tr>
             @endforeach
