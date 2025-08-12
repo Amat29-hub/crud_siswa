@@ -11,7 +11,7 @@
     <h2>Form Edit Siswa</h2>
     <a href="/">Kembali</a><br><br>
     <img src="{{asset('storage/' .$datauser->photo)}}" alt="Photo Siswa" width="120"><br>
-    <form action="/siswa/store" method="POST" enctype="multipart/form-data"><br>
+    <form action="/siswa/update/{{$datauser->id}}" method="POST" enctype="multipart/form-data"><br>
         @csrf
         <div>
             <label for="">Kelas</label><br>
