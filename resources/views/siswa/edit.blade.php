@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Edit Data Siswa</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/edit.css') }}">
 </head>
 <body>
     <h1>MENGEDIT DATA SISWA</h1>
