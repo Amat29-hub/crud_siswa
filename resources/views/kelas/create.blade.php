@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tambah Kelas Siswa</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/create.css') }}">
-</head>
-<body>
+{{--memanggil atau menghubungkan dengan file app--}}
+@extends('layouts.app')
+@section('title', 'Tambah Kelas')
+@section('content')
     <nav>
         <a href="/kelas">Kembali</a>
     </nav>
@@ -32,5 +26,4 @@
         <button type="submit">Simpan</button>
         <button type="reset">Reset</button>
     </form>
-</body>
-</html>
+@endsection

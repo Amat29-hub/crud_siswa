@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Beranda Siswa</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-</head>
-<body>
-
-    <!-- Menu Navigasi -->
-    <nav>
-        <a href="/siswa/create">Tambah Siswa</a>
-        <a href="/kelas">Tambah Class</a>
-    </nav>
-
+{{--memanggil atau menghubungkan dengan file app--}}
+@extends('layouts.app')
+@section('title', 'Beranda Siswa')
+@section('content')
     <h1>HALAMAN BERANDA SISWA</h1>
     <h2>Daftar Siswa</h2>
 
@@ -35,7 +22,7 @@
             <tr>
                 <td>{{$siswa->id}}</td>
                 <td>{{$siswa->name}}</td>
-                <td>{{$siswa->Clas->name}}</td>
+                <td>{{$siswa->clas->name}}</td>
                 <td>{{$siswa->nisn}}</td>
                 <td>{{$siswa->alamat}}</td>
                 <td>
@@ -51,5 +38,4 @@
         </tbody>
     </table>
 
-</body>
-</html>
+@endsection

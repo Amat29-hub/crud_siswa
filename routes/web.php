@@ -28,4 +28,4 @@ Route::post('/kelas/store', [ClassController::class, 'store']);
 Route::get('/kelas/delete/{id}', [ClassController::class, 'destroy']);
 Route::get('/kelas/show/{id}', [ClassController::class, 'show']);
 Route::get('/kelas/edit/{id}', [ClassController::class, 'edit']);
-Route::post('/kelas/update/{id}', [ClasController::class, 'update']);
+Route::post('/kelas/update/{id}', [ClassController::class, 'update']);

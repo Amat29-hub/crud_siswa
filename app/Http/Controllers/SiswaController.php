@@ -34,7 +34,6 @@ class SiswaController extends Controller
     public function store(Request $request){
         //validasi data
         $request->validate([
-            'kelas_id'      =>'required',
             'name'          =>'required',
             'nisn'          =>'required | unique:users,nisn',
             'alamat'        =>'required',

@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halaman tambah kelas</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/edit.css') }}">
-</head>
-
-<body>
+{{--memanggil atau menghubungkan dengan file app--}}
+@extends('layouts.app')
+@section('title', 'Edit Kelas')
+@section('content')
     <h1>Halaman Tambah Kelas</h1>
     <b>Form Tambah Kelas</b>
     <br>
-    <a href="/clas">Kembali</a>
+    <a href="/kelas">Kembali</a>
     <br>
     <form action="/kelas/update/{{ $dataclas->id }}" method="POST">
         @csrf
@@ -37,6 +29,4 @@
         <button type="submit">Simpan</button>
         <button type="reset">Reset</button>
     </form>
-</body>
-
-</html>
+@endsection
