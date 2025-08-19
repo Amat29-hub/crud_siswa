@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halaman Detail Data Siswa</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/show.css') }}">
-</head>
-<body>
+{{--memanggil atau menghubungkan dengan file app--}}
+@extends('layouts.app')
+@section('title', 'Detail Siswa')
+@section('content')
+<a href="/">Kembali</a><br><br>
     <h1>Detail Siswa</h1>
 
     {{--profile siswa--}}
@@ -28,5 +23,4 @@
     {{--no handphone siswa--}}
     <h3>No Handphone siswa : {{$datauser->no_handphone}}</h3>
 
-</body>
-</html>
+@endsection
