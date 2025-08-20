@@ -18,5 +18,6 @@
 
     {{--body conten--}}
     @yield('content')
+    @yield('css')
 </body>
 </html>
